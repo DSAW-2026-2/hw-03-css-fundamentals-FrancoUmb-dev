@@ -1,3 +1,7 @@
+## Sitio publicado
+
+https://dsaw-2026-2.github.io/hw-03-css-fundamentals-FrancoUmb-dev/
+
 # HW03 — CSS Fundamentals
 
 **Week 3 · DSAW · Universidad de La Sabana**

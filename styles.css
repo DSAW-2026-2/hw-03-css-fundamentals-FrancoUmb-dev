@@ -1,0 +1,99 @@
+:root {
+  --color-bg: #F5F2E9;
+  --color-surface: #FEFDF7;
+  --color-text: #1E222F;
+  --color-accent: #C05A2B;
+  --color-border: #D8D3C8;
+  --font-base: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* Base = diseño móvil (referencia 375px) */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+header h1 { font-size: 1.4rem; }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a { color: var(--color-text); text-decoration: none; font-weight: 600; }
+nav a:hover { color: var(--color-accent); }
+
+main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1.25rem; }
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-accent); }
+h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+.solution-grid { display: flex; flex-direction: column; gap: 1rem; }
+
+article {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+form {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 400px;
+}
+
+label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer { text-align: center; padding: 1.5rem; border-top: 1px solid var(--color-border); }
+
+/* Tablet: 768px en adelante */
+@media (min-width: 768px) {
+  header { flex-direction: row; align-items: center; }
+  nav ul { flex-direction: row; gap: 1.5rem; margin-left: auto; }
+  main { padding: 2rem 1.5rem; }
+  h2 { font-size: 1.75rem; }
+  .solution-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+
+/* Escritorio: 1280px en adelante */
+@media (min-width: 1280px) {
+  .solution-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  main { padding: 3rem 2rem; }
+}

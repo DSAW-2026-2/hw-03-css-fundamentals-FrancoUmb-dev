@@ -1,3 +1,35 @@
+## Sitio publicado
+
+https://dsaw-2026-2.github.io/hw-03-css-fundamentals-FrancoUmb-dev/
+
+
+## Registro de uso de IA
+
+**Prompt utilizado:** le pedí a Claude un `styles.css` externo,
+mobile-first (estilos base = móvil, `min-width` para tablet y
+escritorio), usando Flexbox/Grid, reutilizando la paleta de colores que
+ya habíamos definido a partir de las capturas reales del Figma del
+equipo.
+
+**Qué cambió respecto a la primera versión:** la propuesta inicial
+usaba una carpeta `styles/` con dos archivos y un acordeón `:target`
+para FAQ, siguiendo la descripción general del syllabus. Al comparar
+contra el rubric.json real de este repo, encontré que solo se pedía un
+único `styles.css` en la raíz, con breakpoints exactos (375px, 768px,
+1280px, no rangos genéricos), un archivo nuevo `REFLECTION.md` de
+120+ palabras, y que el acordeón de FAQ **no** era un criterio real —
+no lo construí, para no perder tiempo en algo que no sumaba puntos.
+
+**Error real que tuve:** al crear `index.html`, VS Code lo guardó como
+`index.gtml` por un error de tipeo. GitHub Pages no encontraba ninguna
+página que servir hasta que lo renombré correctamente.
+
+**Parte que no entendí de inmediato:** por qué mobile-first con
+`min-width` es distinto a `max-width`. Con `min-width`, los estilos sin
+media query ya son el diseño móvil, y cada breakpoint solo agrega lo
+que cambia hacia arriba, en vez de sobrescribir un diseño de escritorio
+pensado primero.
+
 # HW03 — CSS Fundamentals
 
 **Week 3 · DSAW · Universidad de La Sabana**
